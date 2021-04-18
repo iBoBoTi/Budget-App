@@ -49,13 +49,13 @@ class Budget:
         The check_balance method would give the final balance from all the transaction made on a particular category
         which is gotten from the final money from the budgeted amount
         """
-        # total_amount = 0
-        # for item in self.category:
-        #     total_amount += item['amount']
-        # return total_amount
         return self.budget_amt
 
     def check_funds(self, amount):
+        """
+        The check_funds method is used to check if the available budget amount is enough to accomodate the requested
+        amount
+        """
         if self.get_balance() >= amount:
             return True
         return False
